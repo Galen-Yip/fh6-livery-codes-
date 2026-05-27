@@ -3,129 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Forza Horizon 6 Image to Vinyl Converter | Import Custom Decals</title>
-    <meta name="description" content="Full guide to convert any image to FH6 vinyl decals. Use free tool to import custom pictures, logos and anime decals into Forza Horizon 6 Livery Editor.">
-    <meta name="keywords" content="forza horizon 6 image to vinyl converter, fh6 import image to livery, fh6 custom decals, forza horizon 6 livery editor image import">
+    <title>Forza Horizon 6 Image to Vinyl Converter | Import Custom Decals (Free, Open-Source)</title>
+    <meta name="description" content="Step-by-step guide to convert any PNG/JPG image into FH6 vinyl decals using the open-source forza-painter tool (730+ ⭐ on GitHub). Free, no watermark, safe for online mode.">
+    <meta name="keywords" content="forza horizon 6 image to vinyl converter, fh6 import image to livery, fh6 custom decals, forza horizon 6 livery editor image import, forza painter, forza-painter github, forza-painter-fh6">
     <link rel="canonical" href="https://fh6-livery-codes.vercel.app/image-to-vinyl-converter">
     <meta property="og:title" content="Forza Horizon 6 Image to Vinyl Converter | Import Custom Decals">
-    <meta property="og:description" content="Full guide to convert any image to FH6 vinyl decals. Free, no watermark, safe for online mode.">
+    <meta property="og:description" content="Full guide to convert any image to FH6 vinyl decals with the open-source forza-painter tool. Free, no watermark, safe for online mode.">
     <meta property="og:url" content="https://fh6-livery-codes.vercel.app/image-to-vinyl-converter">
     <meta property="og:type" content="article">
+    <meta property="og:image" content="https://fh6-livery-codes.vercel.app/images/livery-07-cyberpunk.jpg">
+
+    <!-- Schema.org HowTo for Google rich results -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to Convert an Image to a Forza Horizon 6 Vinyl Decal",
+      "description": "Step-by-step guide to import any PNG or JPG image into the Forza Horizon 6 Livery Editor using the open-source forza-painter tool.",
+      "totalTime": "PT15M",
+      "supply": [
+        {"@type":"HowToSupply","name":"PNG or JPG image (transparent PNG recommended)"},
+        {"@type":"HowToSupply","name":"Windows 10/11 PC with Forza Horizon 5 or 6 installed"}
+      ],
+      "tool": [
+        {"@type":"HowToTool","name":"forza-painter (open-source, 730+ ⭐)"}
+      ],
+      "step": [
+        {"@type":"HowToStep","position":1,"name":"Download forza-painter from GitHub","text":"Open the official GitHub repository and download the latest release."},
+        {"@type":"HowToStep","position":2,"name":"Convert image to vinyl shapes","text":"Launch forza-painter, import your PNG/JPG and let the GPU-accelerated geometrize engine convert it to FH-compatible vinyl shapes."},
+        {"@type":"HowToStep","position":3,"name":"Inject shapes into the Livery Editor","text":"With Forza running, run the inject command to load all generated shapes into your active livery layer."}
+      ]
+    }
+    </script>
+
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
-        }
-        body {
-            background-color: #f5f5f5;
-            color: #333;
-            line-height: 1.7;
-        }
-        header {
-            background-color: #0f172a;
-            color: #fff;
-            padding: 1.4rem 5%;
-            text-align: center;
-        }
-        .container {
-            max-width: 1100px;
-            margin: 2rem auto;
-            padding: 0 5%;
-        }
-        h1 {
-            font-size: 1.8rem;
-            margin-bottom: 0.6rem;
-        }
-        h2 {
-            font-size: 1.4rem;
-            margin: 2rem 0 1rem;
-            color: #1e293b;
-            border-left: 4px solid #2563eb;
-            padding-left: 10px;
-        }
-        .intro {
-            font-size: 1.05rem;
-            color: #475569;
-            margin: 1rem 0 2rem;
-        }
-        .ad-unit {
-            background: #e2e8f0;
-            padding: 1.2rem;
-            margin: 2rem 0;
-            text-align: center;
-            border-radius: 8px;
-        }
-        .step-card {
-            background: #fff;
-            padding: 1.4rem;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-            margin: 1rem 0;
-        }
-        .step-num {
-            display: inline-block;
-            background: #2563eb;
-            color: #fff;
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            text-align: center;
-            line-height: 30px;
-            margin-right: 8px;
-        }
-        .download-box {
-            background: #f0f7ff;
-            padding: 1.4rem;
-            border-radius: 8px;
-            border: 1px solid #bfdbfe;
-            margin: 1.5rem 0;
-        }
-        .download-btn {
-            display: inline-block;
-            background: #2563eb;
-            color: #fff;
-            text-decoration: none;
-            padding: 0.7rem 1.5rem;
-            border-radius: 6px;
-            margin-top: 1rem;
-        }
-        .faq-item {
-            background: #fff;
-            padding: 1.2rem;
-            border-radius: 8px;
-            margin: 1rem 0;
-            box-shadow: 0 1px 5px rgba(0,0,0,0.05);
-        }
-        .inner-link {
-            display: inline-block;
-            margin: 1rem 0;
-            color: #2563eb;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        footer {
-            background: #0f172a;
-            color: #cbd5e1;
-            text-align: center;
-            padding: 1.5rem;
-            margin-top: 3rem;
-            font-size: 0.9rem;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Arial', sans-serif; }
+        body { background-color: #f5f5f5; color: #333; line-height: 1.7; }
+        header { background-color: #0f172a; color: #fff; padding: 1.4rem 5%; text-align: center; }
+        .container { max-width: 1100px; margin: 2rem auto; padding: 0 5%; }
+        h1 { font-size: 1.8rem; margin-bottom: 0.6rem; }
+        h2 { font-size: 1.4rem; margin: 2rem 0 1rem; color: #1e293b; border-left: 4px solid #2563eb; padding-left: 10px; }
+        .intro { font-size: 1.05rem; color: #475569; margin: 1rem 0 2rem; }
+        .ad-unit { background: #e2e8f0; padding: 1.2rem; margin: 2rem 0; text-align: center; border-radius: 8px; min-height: 100px; }
+        .step-card { background: #fff; padding: 1.4rem; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); margin: 1rem 0; }
+        .step-num { display: inline-block; background: #2563eb; color: #fff; width: 30px; height: 30px; border-radius: 50%; text-align: center; line-height: 30px; margin-right: 8px; font-weight: bold; }
+        .download-box { background: #f0f7ff; padding: 1.4rem; border-radius: 8px; border: 1px solid #bfdbfe; margin: 1.5rem 0; }
+        .download-box h3 { margin-bottom: 0.4rem; color: #1e40af; }
+        .download-btn { display: inline-block; background: #2563eb; color: #fff; text-decoration: none; padding: 0.7rem 1.5rem; border-radius: 6px; margin-top: 1rem; font-weight: bold; }
+        .download-btn:hover { background: #1d4ed8; }
+        .download-btn.alt { background: #fff; color: #2563eb; border: 2px solid #2563eb; margin-left: 0.6rem; }
+        .stat-row { display: flex; gap: 1.5rem; flex-wrap: wrap; margin: 0.8rem 0; font-size: 0.92rem; color: #475569; }
+        .stat-row span { display: flex; align-items: center; gap: 4px; }
+        .why-card { background: #fff; padding: 1.4rem; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); margin: 1rem 0; }
+        .why-card ul { padding-left: 1.4rem; margin-top: 0.5rem; }
+        .why-card li { margin: 0.4rem 0; }
+        .preview-img { width: 100%; max-width: 600px; height: auto; border-radius: 10px; margin: 1rem auto; display: block; box-shadow: 0 4px 16px rgba(0,0,0,0.12); }
+        .faq-item { background: #fff; padding: 1.2rem; border-radius: 8px; margin: 1rem 0; box-shadow: 0 1px 5px rgba(0,0,0,0.05); }
+        .inner-link { display: inline-block; margin: 1rem 0; color: #2563eb; text-decoration: none; font-weight: bold; }
+        .warning { background: #fef2f2; border-left: 4px solid #ef4444; padding: 0.9rem 1rem; margin: 1.2rem 0; font-size: 0.95rem; color: #7f1d1d; border-radius: 4px; }
+        code { background: #f1f5f9; padding: 2px 6px; border-radius: 4px; font-family: monospace; font-size: 0.9em; color: #0f172a; }
+        footer { background: #0f172a; color: #cbd5e1; text-align: center; padding: 1.5rem; margin-top: 3rem; font-size: 0.9rem; }
     </style>
 </head>
 <body>
     <header>
         <h1>Image to Vinyl Converter for Forza Horizon 6</h1>
-        <p>Import Custom Images, Logos & Anime Decals into FH6 Livery Editor</p>
+        <p>Import Custom Images, Logos & Anime Decals into the FH6 Livery Editor with the Open-Source forza-painter Tool</p>
     </header>
 
     <div class="container">
         <div class="intro">
-            <p>The official Forza Horizon 6 Livery Editor does not support direct image upload. This step-by-step guide shows you how to convert any PNG/JPG image into usable FH6 vinyl decals using a free converter tool.</p>
-            <a class="inner-link" href="/">Click here to browse ready-made FH6 Livery Codes →</a>
+            <p>The official Forza Horizon 6 Livery Editor still does not support direct image upload — only basic shapes. This guide shows you how to convert any PNG/JPG image into FH6-compatible vinyl decals using the open-source <strong>forza-painter</strong> tool (over <strong>730 ⭐ on GitHub</strong>, MIT-licensed, no installation tracking, no watermarks).</p>
+            <a class="inner-link" href="/">← Back to FH6 Livery Codes Library</a>
         </div>
+
+        <img src="/images/livery-07-cyberpunk.jpg" alt="Example of a custom image converted into a Forza Horizon 6 vinyl livery — cyberpunk circuit pattern hypercar wrap" class="preview-img" loading="lazy" width="800" height="597">
 
         <!-- Adsterra Ad Slot A: Native Banner (above-the-fold) -->
         <div class="ad-unit">
@@ -133,24 +85,42 @@
             <div id="container-11e0a58843f48f864639a1da01a5faff"></div>
         </div>
 
-        <h2>Why Use an Image to Vinyl Converter?</h2>
-        <div class="step-card">
-            <p>The default FH6 livery editor only provides basic shapes. To create custom anime decals, brand logos, player portraits and unique car designs, you need a third-party image converter. This method is 100% free, no watermarks, and safe for online mode.</p>
+        <h2>Why We Recommend forza-painter</h2>
+        <div class="why-card">
+            <p>Out of every "Forza vinyl import" tool we've evaluated, only <strong>forza-painter</strong> is genuinely safe and effective. It's been the community standard since FH4, and the FH6-tuned fork from <code>bvzrays</code> already has GPU-accelerated geometrize support.</p>
+            <ul>
+                <li>✅ <strong>Open-source on GitHub</strong> — every line of code is auditable, no hidden tracking</li>
+                <li>✅ <strong>730+ ⭐ on the main repo</strong> — vetted by thousands of livery designers</li>
+                <li>✅ <strong>MIT licensed</strong> — free for personal and commercial use</li>
+                <li>✅ <strong>No game-file modification</strong> — only injects vinyl shapes through the official editor pipeline, so it cannot trigger anti-cheat</li>
+                <li>✅ <strong>Active maintenance</strong> — issues are answered, FH6 fork already exists</li>
+            </ul>
         </div>
 
-        <h2>Step 1: Download Free FH6 Vinyl Converter Tool</h2>
+        <h2>Step 1 · Download the Open-Source Converter</h2>
         <div class="download-box">
-            <h3>Forza Painter (Best Free Tool 2026)</h3>
-            <p>No registration, no paywall, no watermarks. Fully compatible with Forza Horizon 6 latest version.</p>
-            <a href="#" class="download-btn">Download Converter Tool</a>
+            <h3>forza-painter (Recommended)</h3>
+            <p>The original, most popular Forza vinyl import tool. Works with FH4, FH5 and (via the FH6 fork below) FH6.</p>
+            <div class="stat-row">
+                <span>⭐ 730+ stars</span>
+                <span>📜 MIT License</span>
+                <span>🛠 Active maintenance</span>
+                <span>🪟 Windows 10/11</span>
+            </div>
+            <a href="https://github.com/forza-painter/forza-painter/releases/latest" target="_blank" rel="noopener" class="download-btn">Download forza-painter (GitHub)</a>
+            <a href="https://github.com/bvzrays/forza-painter-fh6" target="_blank" rel="noopener" class="download-btn alt">FH6-Tuned Fork (bvzrays)</a>
+            <div class="warning" style="margin-top:1rem;">
+                <strong>⚠️ Only download from the official GitHub release pages above.</strong> Reuploads on shady sites often bundle malware. If a "forza painter" download asks you to disable Windows Defender or pay anything, it is fake.
+            </div>
         </div>
 
-        <h2>Step 2: Convert Image to FH6 Vinyl File</h2>
+        <h2>Step 2 · Convert Your Image to Vinyl Shapes</h2>
         <div class="step-card">
-            <p><span class="step-num">1</span>Prepare PNG/JPG image (transparent PNG recommended for best decal quality)</p>
-            <p><span class="step-num">2</span>Open Forza Painter and import your picture</p>
-            <p><span class="step-num">3</span>Adjust resolution, contrast and transparency</p>
-            <p><span class="step-num">4</span>Export as FH6 compatible vinyl decal file</p>
+            <p><span class="step-num">1</span>Prepare a <strong>PNG or JPG</strong> image. Transparent PNG with a single subject works best (logos, anime portraits, flag patterns).</p>
+            <p><span class="step-num">2</span>Run <code>forza-painter.exe</code> and click <strong>Open Image</strong>.</p>
+            <p><span class="step-num">3</span>Choose a shape budget (e.g. <code>2000 shapes</code> for a balanced result on most cars).</p>
+            <p><span class="step-num">4</span>Click <strong>Geometrize</strong> — the GPU-accelerated engine will trace your image into FH-compatible primitives in 30-90 seconds.</p>
+            <p><span class="step-num">5</span>Preview the result inside the tool. Reduce shapes if file feels heavy, increase for more detail.</p>
         </div>
 
         <!-- Adsterra Ad Slot B: Banner 728x90 (mid-content) -->
@@ -167,26 +137,40 @@
             <script type="text/javascript" src="https://www.highperformanceformat.com/eb7da3ecdf1950f8f95f34d5ffd5ed1d/invoke.js"></script>
         </div>
 
-        <h2>Step 3: Import Custom Decals into Livery Editor</h2>
+        <h2>Step 3 · Import the Decals into the Livery Editor</h2>
         <div class="step-card">
-            <p><span class="step-num">1</span>Launch Forza Horizon 6 and go to Garage</p>
-            <p><span class="step-num">2</span>Select your custom car and open Livery Editor</p>
-            <p><span class="step-num">3</span>Navigate to Custom Decals &gt; Import Vinyl</p>
-            <p><span class="step-num">4</span>Load your converted file and place it on your vehicle</p>
+            <p><span class="step-num">1</span>Launch <strong>Forza Horizon 5</strong> (or FH6 once it ships — same flow), enter the <strong>Garage</strong> and pick your car.</p>
+            <p><span class="step-num">2</span>Open <strong>Customize → Livery Editor</strong>, create a new vinyl group on the panel you want to paint.</p>
+            <p><span class="step-num">3</span>Alt-tab back to forza-painter and click <strong>Inject</strong>. The tool sends each shape to the editor exactly as if you were drawing them by hand — that's why it's anti-cheat safe.</p>
+            <p><span class="step-num">4</span>Wait until injection finishes (1-3 minutes for 2000 shapes). Save the vinyl group, then place and resize it on your car.</p>
+            <p><span class="step-num">5</span>Save the entire livery and (optionally) <strong>Share Design</strong> so the community can find it via your Creator ID — that's how the codes on our <a href="/" class="inner-link" style="display:inline">homepage</a> are built.</p>
         </div>
 
         <h2>Frequently Asked Questions</h2>
+
         <div class="faq-item">
-            <strong>Q: Is this tool safe for online multiplayer?</strong>
-            <p>A: Yes. This tool only converts image files and does not modify game data. It will not trigger anti-cheat detection.</p>
+            <strong>Q: Is forza-painter safe for online multiplayer?</strong>
+            <p>A: Yes. The tool only sends keyboard/mouse-equivalent input to draw shapes inside the official Livery Editor. It does <em>not</em> modify game files, memory or save data, so it cannot trigger anti-cheat or affect your online status.</p>
         </div>
+
         <div class="faq-item">
-            <strong>Q: What image format works best?</strong>
-            <p>A: Transparent PNG files give the cleanest decal results. Avoid blurry JPG images for detailed liveries.</p>
+            <strong>Q: Will forza-painter work on FH6 at launch?</strong>
+            <p>A: The community fork <code>bvzrays/forza-painter-fh6</code> is already tracking the FH6 beta builds. The original repo is also expected to update within the first weeks after launch. Until then, run it on FH5 — designs you save now will carry over to FH6 via your Personal Vault.</p>
         </div>
+
         <div class="faq-item">
-            <strong>Q: Why can’t I import my decal?</strong>
-            <p>A: Make sure your file size and resolution fit FH6 requirements and re-export the vinyl file.</p>
+            <strong>Q: What image format gives the best decal quality?</strong>
+            <p>A: Transparent PNG with high contrast and a single clear subject. Avoid heavy JPG compression artifacts — they create messy edge shapes. Aim for 1024-2048 px on the longest side.</p>
+        </div>
+
+        <div class="faq-item">
+            <strong>Q: My injection stalls halfway through. What now?</strong>
+            <p>A: Reduce the shape count to ~1500, make sure the FH window is in <em>Borderless Windowed</em> mode, and disable any overlay (Discord, GeForce Experience). Restart both apps and re-inject.</p>
+        </div>
+
+        <div class="faq-item">
+            <strong>Q: Where can I share my finished livery?</strong>
+            <p>A: Use the in-game <strong>Share Design</strong> flow. Once it's public, your Creator ID + design name can be searched by anyone — exactly the same format we use on our <a href="/" class="inner-link" style="display:inline">livery codes library</a>.</p>
         </div>
 
         <!-- Adsterra Ad Slot C: Banner 300x250 (footer) -->
@@ -205,7 +189,7 @@
     </div>
 
     <footer>
-        © 2026 FH6 Vinyl Converter Guide | For personal gameplay use only
+        © 2026 FH6 Vinyl Converter Guide | Fan-made tutorial · forza-painter is © its respective open-source authors · Not affiliated with Playground Games or Microsoft
     </footer>
 </body>
 </html>
