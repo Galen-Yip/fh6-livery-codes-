@@ -1,15 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemaps-image/1.1">
   <url>
     <loc>https://fh6-livery-codes.vercel.app/</loc>
-    <lastmod>2026-05-26</lastmod>
+    <lastmod>2026-05-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
+    <image:image><image:loc>https://fh6-livery-codes.vercel.app/images/livery-01-lightning-mcqueen.jpg</image:loc><image:title>Lightning McQueen Movie Livery for Forza Horizon 6</image:title></image:image>
+    <image:image><image:loc>https://fh6-livery-codes.vercel.app/images/livery-02-neon-anime.jpg</image:loc><image:title>Tokyo Neon Anime Livery for FH6</image:title></image:image>
+    <image:image><image:loc>https://fh6-livery-codes.vercel.app/images/livery-03-minimalist-bw.jpg</image:loc><image:title>Minimalist Black & White Livery for FH6</image:title></image:image>
+    <image:image><image:loc>https://fh6-livery-codes.vercel.app/images/livery-04-synthwave.jpg</image:loc><image:title>Sunset Synthwave Supercar Livery</image:title></image:image>
+    <image:image><image:loc>https://fh6-livery-codes.vercel.app/images/livery-05-rally-blue-gold.jpg</image:loc><image:title>Rally Blue & Gold Livery for FH6</image:title></image:image>
+    <image:image><image:loc>https://fh6-livery-codes.vercel.app/images/livery-06-american-muscle.jpg</image:loc><image:title>Stars & Stripes American Muscle Livery</image:title></image:image>
+    <image:image><image:loc>https://fh6-livery-codes.vercel.app/images/livery-07-cyberpunk.jpg</image:loc><image:title>Cyberpunk Circuit Hypercar Livery</image:title></image:image>
+    <image:image><image:loc>https://fh6-livery-codes.vercel.app/images/livery-08-vintage-lemans.jpg</image:loc><image:title>Vintage Le Mans #23 Racing Livery</image:title></image:image>
   </url>
   <url>
     <loc>https://fh6-livery-codes.vercel.app/image-to-vinyl-converter</loc>
-    <lastmod>2026-05-26</lastmod>
+    <lastmod>2026-05-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <image:image><image:loc>https://fh6-livery-codes.vercel.app/images/livery-07-cyberpunk.jpg</image:loc><image:title>Custom image to FH6 vinyl decal example</image:title></image:image>
   </url>
 </urlset>
