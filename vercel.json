@@ -1,6 +1,5 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "cleanUrls": false,
   "trailingSlash": false,
   "rewrites": [
     {
@@ -10,18 +9,6 @@
     {
       "source": "/livery-codes",
       "destination": "/index.html"
-    }
-  ],
-  "redirects": [
-    {
-      "source": "/index.html",
-      "destination": "/",
-      "permanent": true
-    },
-    {
-      "source": "/image-to-vinyl-converter.html",
-      "destination": "/image-to-vinyl-converter",
-      "permanent": true
     }
   ],
   "headers": [
